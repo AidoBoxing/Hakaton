@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <title>Работа с REST API</title>
+  <style>
+    .delete-btn {
+      width: 37px;
+      height: 33px;
+      background: url(Images/Vector.png);
+      background-repeat: no-repeat;
+    }
+
+    .modals {
+      width: 38px;
+      height: 33px;
+      background: url(Images/Group.png);
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container p-3">
+    <h3 class="mt-2 mr-2">Администраторы</h3>
+
+    <div class="row">
+      <div class="col-sm-12 mt-2">
+        <button type="button" class="btn btn-dark float-end" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          data-bs-whatever="@">Добавить пользователя</button>
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="md-surname" class="col-form-label">Фамилия</label>
+                  <input type="text" class="form-control" id="md-surname">
+                </div>
+                <div class="mb-3">
+                  <label for="md-name" class="col-form-label">Имя</label>
+                  <input type="text" class="form-control" id="md-name">
+                </div>
+                <div class="mb-3">
+                  <label for="md-patronymic" class="col-form-label">Отчество</label>
+                  <input type="text" class="form-control" id="md-patronymic">
+                </div>
+                <div class="mb-3">
+                  <label for="md-course" class="col-form-label">Курс</label>
+                  <input type="text" class="form-control" id="md-course">
+                </div>
+                <div class="mb-3">
+                  <label for="md-phoneNumber" class="col-form-label">Номер Телефона</label>
+                  <input type="number" class="form-control" id="md-phoneNumber">
+                </div>
+              </form>
+              <div class="mb-3">
+                <label for="md-PIN" class="col-form-label">PIN</label>
+                <input type="number" class="form-control" id="md-PIN">
+              </div>
+              <div class="mb-3">
+                <label for="md-login" class="col-form-label">Логин</label>
+                <input type="text" class="form-control" id="md-login">
+              </div>
+              <div class="mb-3">
+                <label for="md-email" class="col-form-label">Email</label>
+                <input type="text" class="form-control" id="md-email">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Назад</button>
+              <button id="btn" type="button" class="btn btn-primary">Добавить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="edit-form">
+                <div>
+                  <div class="mb-3">
+                  <label for="edit-surname" class="col-form-label">Фамилия</label>
+                  <input type="text" class="form-control" name="surname" id="edit-surname">
+                </div>
+                <div class="mb-3">
+                  <label for="edit-name" class="col-form-label">Name</label>
+                  <input type="text" class="form-control" name="name" id="edit-name">
+                </div>
+                <div class="mb-3">
+                  <label for="edit-patronymic" class="col-form-label">Отчество</label>
+                  <input type="text" class="form-control" name="patronymic" id="edit-patronymic">
+                </div>
+                <div class="mb-3">
+                  <label for="edit-course" class="col-form-label">Course</label>
+                  <input type="text" class="form-control" name="course" id="edit-course">
+                </div>
+                <div class="mb-3">
+                  <label for="edit-phoneNumber" class="col-form-label">Phone-Number</label>
+                  <input type="number" class="form-control" name="phoneNumber" id="edit-phoneNumber">
+                </div>
+                <div class="mb-3">
+                  <label for="edit-PIN" class="col-form-label">PIN</label>
+                  <input type="number" class="form-control" name="PIN" id="edit-PIN">
+                </div>
+                <div class="mb-3">
+                  <label for="edit-login" class="col-form-label">Логин</label>
+                  <input type="text" class="form-control" name="login" id="edit-login">
+                </div>
+                <div class="mb-3">
+                  <label for="edit-email" class="col-form-label">Email</label>
+                  <input type="text" class="form-control" name="email" id="edit-email">
+                </div>
+                </div>
+                
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" id="editBtn" class="btn btn-primary">Сhange</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Админ</th>
+            <th scope="col">Курс</th>
+            <th scope="col">Номер телефона</th>
+            <th scope="col">Пин код</th>
+            <th scope="col">Логин</th>
+            <th scope="col">Email</th>
+            <th scope="col">Действия</th>
+          </tr>
+        </thead>
+        <tbody id="body-table">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+  <script src="index.js"></script>
+</body>
+
+</html>

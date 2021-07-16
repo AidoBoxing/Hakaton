@@ -1,0 +1,295 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans';
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* ширина для вертикального скролла */
+  height: 10px; /* высота для горизонтального скролла */
+  background-color: white;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #232529;
+  border-radius: 3px;
+}
+
+
+.finish__body {
+  background-color: #929292;
+}
+
+
+h1,
+h2,
+ {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none !important
+}
+
+input[type="number"]
+{
+  font-family: Open Sans;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;  
+  line-height: 18px;
+  color: #141414;
+  outline: none;
+}
+
+
+input[type="text"]
+{
+  font-family: Open Sans;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;  
+  line-height: 18px;
+  color: #141414;
+  outline: none;
+}
+
+
+
+input[type="date"]
+{
+  font-family: Open Sans;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;  
+  line-height: 18px;
+  color: #141414;
+  outline: none;
+}
+
+
+input[type="tel"]
+{
+  font-family: Open Sans;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;  
+  line-height: 18px;
+  color: #141414;
+  outline: none;
+}
+
+
+/*Удаление стрелок в input[type="number"] для браузера Chrome:*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+/*Для браузера Firefox:*/
+input[type="number"] {
+-moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+-moz-appearance: number-input;
+}
+/*Для других*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+
+.main__title {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+.form__main-wrap {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.form__input-wrapper {
+  width: 100%;
+  max-width: 640px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 40px 16px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+
+.form__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.form__label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form__input {
+  width: 100%;
+  display: block;
+  padding: 15px;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.form__btn {
+  display: block;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding: 15px;
+  border: none;
+  box-sizing: border-box;
+  background: #232529;
+  width: 100%;
+  color: #fff;
+  border-radius: 4px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  margin: 0 auto;
+  max-width: 385px;
+
+}
+
+
+.form__btn:hover {
+  background: rgba(35, 37, 41, 0.5);
+}
+
+.form__inputs-wrap {
+  align-items: flex-start;
+  padding: 45px 0;
+  height: 100%;
+}
+
+
+
+::-webkit-input-placeholder {
+  font-family: 'Open Sans';
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+::-moz-placeholder {
+  font-family: 'Open Sans';
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+/* Firefox 19+ */
+:-moz-placeholder {
+  font-family: 'Open Sans';
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+  font-family: 'Open Sans';
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+
+.form__inputs-title {
+  margin-bottom: 16px;
+}
+
+
+.form__input-app {
+  margin-bottom: 8px;
+}
+
+
+::-webkit-datetime-edit-fields-wrapper {
+  font-family: 'Open Sans';
+  font-size: 15px;
+}
+
+::-webkit-calendar-picker-indicator {
+}
+
+
+.form__inputs {
+  margin-bottom: 24px;
+}
+
+
+#passport__date {
+  padding: 12px;
+}
+
+
+.form__input-btn {
+  margin-top: 16px;
+}
+
+.form__input-btn-arrange {
+  margin-top: 16px;
+}
+
+
+.form__paraph {
+  color: #A9A9A9;
+  text-align: center;
+}
+
+.form__ok {
+  display: block;
+  margin: 18px auto 32px auto;
+}
+
+.form__title-ok {
+  text-align: center;
+}
+
+
+.show-rule
+{
+  display: none;
+  color: green;
+  font-family: Open Sans;
+  font-size: 14px;
+  padding: 10px 0px 5px 0px;
+
+}
+
+

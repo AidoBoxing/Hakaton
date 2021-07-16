@@ -1,0 +1,196 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Rubik';
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* ширина для вертикального скролла */
+  height: 8px; /* высота для горизонтального скролла */
+  background-color: rgb(201, 201, 201);
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #232529;
+  border-radius: 5px;
+}
+
+
+h1,
+h2,
+{
+  margin: 0;
+  padding: 0;
+}
+
+
+p 
+{
+  margin: 0;
+  padding: 0;
+}
+
+
+a 
+{
+  text-decoration: none !important
+}
+
+
+input[type="number"] 
+{
+  font-family: Sofia Pro;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;  
+  line-height: 24px;
+  text-align: center;
+  color: #141414;
+}
+
+/*Удаление стрелок в input[type="number"] для браузера Chrome:*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::placeholder {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*Для браузера Firefox:*/
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+/*Для других*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.wrapper 
+{
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+
+.form__main-wrap 
+{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+
+.form__input-wrapper 
+{
+  width: 100%;
+  max-width: 640px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 40px 16px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+
+.form__confirm 
+{
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+
+.form__input {
+  width: 100%;
+  display: block;
+  padding: 15px;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+
+#my-btn 
+{
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #232529;
+  color: #fff;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  margin: 0 auto;
+  max-width: 385px;
+}
+
+
+#my-btn:hover 
+{
+  background: rgba(35, 37, 41, 0.5);
+}
+
+
+.form__content 
+{
+  color: #A9A9A9;
+  text-align: center;
+}
+
+
+.form__confirm__ok 
+{
+  text-align: center;
+}
+
+
+.form__verification-number 
+{
+  width: 48px;
+  height: 48px;
+  display: block;
+  padding: 8px 15px;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 12px;
+  margin-right: 8px;
+  font-size: 24px;
+  text-align: center;
+  outline: none;
+}
+
+.form__verification-number:last-child {
+  margin-right: 0;
+}
+
+
+.form__verification-numbers 
+{
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 48px 0;
+}
+
+
+.addError input, .error
+{
+  border-color: red;
+  color: red;
+  text-align: center;
+}

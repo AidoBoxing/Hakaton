@@ -1,0 +1,75 @@
+@media screen and (min-width: 767.98px) {
+
+
+    .body-color 
+    {
+        background-color: #000000;
+    }
+
+
+    .finish__body 
+    {
+        background-color: #000000;
+    }
+
+
+    .form__container 
+    {
+        max-width: 640px;
+        margin: 0 auto;
+
+    }
+
+
+    #authorization
+    {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+
+    .form__title 
+    {
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+
+    .form-input   
+    {
+        margin-bottom: 16px;
+    }
+
+
+    #btn
+    {
+        width: 482px;
+    }
+
+
+    .my-btn
+    {
+        font-size: 20px;
+    }
+
+
+    .form__inputs-title 
+    {
+        text-align: left;
+    }
+    
+
+    .form__confirm 
+    {
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+
+    .form__inputs-title 
+    {
+      text-align: left;
+  }
+
+
+}

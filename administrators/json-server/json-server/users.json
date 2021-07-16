@@ -1,0 +1,23 @@
+{
+  "user": [
+    {
+      "surname": "Толгобаев",
+      "name": "Айдар",
+      "patronymic": "Маратович",
+      "course": "Front End",
+      "phoneNumber": "996555505174",
+      "PIN": "1234",
+      "login": "AidoBoxing",
+      "email": "mr.tolgobaev@mail.ru",
+      "id": 1
+    }
+  ],
+  "buffet": [
+    {
+      "name": "Cамсы",
+      "price": "40",
+      "photo": "http://st2.depositphotos.com/4249115/11181/i/600/depositphotos_111815382-stock-photo-delicious-samosa-pies-with-meat.jpg",
+      "id": 1
+    }
+  ]
+}

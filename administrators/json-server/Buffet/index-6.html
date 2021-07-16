@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product card</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="index-6.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div id="root" class="row"></div>
+
+    <div class="modal fade" id="modals" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="edit-form">
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Name</label>
+                <input type="text" class="form-control" name="name" id="edit-name">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Course</label>
+                <input type="text" class="form-control" name="course" id="edit-course">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Phone-Number</label>
+                <input type="number" class="form-control" name="phoneNumber" id="edit-phoneNumber">
+              </div>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">PIN</label>
+                <input type="number" class="form-control" name="PIN" id="edit-PIN">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" id="editBtn" class="btn btn-primary">Сhange</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script id="product-card" type="text/x-handlebars-template">
+    {{#each this}}
+		<div class="card mx-auto col-3 mt-5 ms-3"> 
+      <div style="display: flex;
+                  justify-content: flex-end;">
+          <img src="img/x.png" class="x" alt="#">
+      </div>
+			<img class='mx-auto img-thumbnail'
+				src="{{photo}}" />
+			<div class="card-body text-center mx-auto">
+				<div class='cvp'>
+					<h5 class="card-title font-weight-bold">{{name}} {{price}} сом 
+            <a href="index-5.html?id={{id}}">
+              <img src="/administrators/json-server/Images/Group.png" class="edit" alt="#">
+            </a>
+          </h5>
+        
+				</div>
+			</div>
+		</div>
+	  {{/each}}
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"
+    integrity="sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="index-6.js"></script>
+</body>
+
+</html>

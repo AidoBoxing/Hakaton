@@ -1,0 +1,209 @@
+body 
+{
+	margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Rubik;
+}
+
+
+.container
+{
+	display: flex;
+	flex-direction: column;
+}
+
+
+.form-wrapper
+{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#main-frame
+{
+	width: 640px;
+	background: #FFFFFF;
+	border-radius: 4px;
+	padding: 16px 16px 48px 16px;
+}
+
+
+#authorization
+{
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+	margin-bottom: 24px;
+  text-align: center;
+}
+
+
+.form-label
+{
+	font-weight: 400;
+	font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+
+.jaja {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.form-input 
+{
+ width: 100%;
+ border: 0.5px solid #DADADA;
+ box-sizing: border-box;
+ border-radius: 4px;
+ background-color: transparent; 
+ margin: 8px 0px 16px;			
+ padding: 16px;
+ outline: none;
+}
+
+
+::-webkit-input-placeholder {
+  font-family: 'Sora';
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+::-moz-placeholder {
+  font-family: 'Sora';
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+/* Firefox 19+ */
+:-moz-placeholder {
+  font-family: 'Sora';
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+/* Firefox 18- */
+:-ms-input-placeholder {
+  font-family: 'Sora';
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.25);
+}
+
+
+input[type="number"] 
+{
+  font-family: Sora;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;  
+  line-height: 18px;
+  color: #141414;
+}
+
+
+/*Удаление стрелок в input[type="number"] для браузера Chrome:*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*Для браузера Firefox:*/
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+/*Для других*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+#button 
+{	
+	display: flex;
+	justify-content: center;
+}
+
+
+#btn
+{
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  text-transform: capitalize;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #232529;
+  color: #fff;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  margin: 0 auto;
+  max-width: 385px;
+}
+
+
+#btn:hover 
+{
+  background: rgba(35, 37, 41, 0.5);
+}
+
+
+.addError input, .error
+{
+  font-family: Rubik;
+  font-weight: 500;
+  border-color: red;
+  color: red;
+  text-align: center;
+}
+
+.form__verification-number 
+{
+  width: 48px;
+  height: 48px;
+  display: block;
+  padding: 8px 15px;
+  border: 1px solid #DADADA;
+  box-sizing: border-box;
+  border-radius: 12px;
+  margin-right: 8px;
+  font-size: 24px;
+  text-align: center;
+  outline: none;
+}
+
+.form__verification-numbers 
+{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+
+
+
+

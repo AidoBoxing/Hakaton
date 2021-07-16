@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/verification.css">
+  <link rel="stylesheet" href="css/response.css">
+  <link rel="stylesheet" href="css//bootstrap/bootstrap-grid.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Sora:wght@600&display=swap" rel="stylesheet">
+  <title>Verification</title>
+</head>
+
+<body class="body-color">
+  <div class="wrapper">
+    <div class="form__main-wrap">
+      <div class="container">
+        <form id="form-elements" class="form__input-wrapper">
+          <h2 class="form__confirm form__confirm__ok"> Введите код подтверждения</h2>
+          <p class="form__content">На ваш номер отправлен SMS с <br> персональным кодом</p>
+          <div class="form__verification-numbers">
+            <input type="number" class="form__verification-number" onkeyup="testJump(this);" maxlength="1" size="1" required>
+            <input type="number" class="form__verification-number" onkeyup="testJump(this);" maxlength="1" size="1" required>
+            <input type="number" class="form__verification-number" onkeyup="testJump(this);" maxlength="1" size="1" required>
+            <input type="number" class="form__verification-number" onkeyup="testJump(this);" maxlength="1" size="1" required>
+          </div>
+          <button type="button" id="my-btn">Далее</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/verification.js"></script>
+</body>
+</html>

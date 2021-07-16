@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/form-style.css">
+  <link rel="stylesheet" href="css/response.css">
+  <link rel="stylesheet" href="css//bootstrap/bootstrap-grid.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <title>Анкета для корпоративных клиентов</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="form__main-wrap form__inputs-wrap">
+      <div class="container">
+        <div class="form__container">
+          <h1 class="main__title">Анкета для корпоративных клиентов</h1>
+          <form action="javascript:void(0)" id="add__form">
+            <div class="form__inputs" id="user">
+              <h2 class="form__title form__inputs-title">Личные данные</h2>
+
+              <div class="row">
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="last__name" class="form__label">Фамилия</label>
+                    <input type="text" id="last__name" placeholder="Иванов" class="form__input form__input-app" name="surname">
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="name" class="form__label">Имя</label>
+                    <input type="text" id="name" placeholder="Иван" class="form__input form__input-app" name="name">
+                  </div>
+                </div>
+                <div class="col-12 col-md-4">
+                  <div class="form__input-item">
+                    <label for="patronymic" class="form__label">Отчество</label>
+                    <input type="text" id="patronymic" placeholder="Иванович" class="form__input form__input-app" name="fatherName">
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                  <div class="form__input-item">
+                    <label for="born__date" class="form__label">Дата рождения</label>
+                    <input type="date" id="born__date" value="2021-12-12"
+                    class="form__input form__input-app" name="birthday">
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-8">
+                  <div class="form__input-item">
+                    <label for="address" class="form__label">Фактическое место проживания</label>
+                    <input type="text" id="address" placeholder="Бишкек. Чорморова 23/3 кв.43"
+                    class="form__input form__input-app" name="addressFact">
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="contact__number" class="form__label">Контактный номер</label>
+                    <input type="tel" id="contact__number" placeholder="+996 555 000 000"
+                    class="form__input form__input-app" name="phone">
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="email" class="form__label">Электронный адрес</label>
+                    <input type="tel" id="email" placeholder="ivanov@mail.ru" class="form__input form__input-app" name="email">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="form__inputs" id="passportData">
+              <h2 class="form__title form__inputs-title">Паспортные данные</h2>
+              <div class="row">    
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="passport_number" class="form__label">Серийный номер AN/ID</label>
+                    <input type="text" id="passport_number" placeholder="AN1234567" class="form__input form__input-app" name="passportNum">
+                  </div>
+                </div>
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="inn" class="form__label">ИНН</label>
+                    <input type="number" id="inn" placeholder="12345678987654" class="form__input form__input-app" name="inn">
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="passport__date" class="form__label">Дата получения</label>
+                    <input type="date" id="passport__date"  value="2021-12-12"
+                    class="form__input form__input-app" name="issuedDate">
+                  </div>
+                </div>
+
+                <div id="jaja" class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="bank__name" class="form__label">Наименование банка</label>
+                    <select class="form__input form__input-app" id="bank__name" name="bankName" onchange="showRules()">
+                      <option selected>Выберите банк</option>
+                      <option value="Бакай Банк">Бакай Банк</option>
+                      <option value="Дос Кредо Банк">Дос Кредо Банк</option>
+                    </select>
+                <div><a id="bakai-bank" class="show-rule" href="https://megadrive.megacom.kg/api_img/file/download/f41899d1-8ccd-4c4c-adcb-a09ce3b0ff81/BakaiBank%20rules.pdf">Условия кредита Бакай банк</a></div>
+                <div><a id="dos-credo-bank" class="show-rule" href="https://megadrive.megacom.kg/api_img/file/download/e41722d6-ad2d-4a9a-950e-ed8453c9f225/DosCredoBank%20rules.pdf">Условия кредита Дос-Кредо банк</a></div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-8">
+                  <div class="form__input-item">
+                    <label for="address__b" class="form__label">Место проживания по прописке</label>
+                    <input type="text" id="address__b" placeholder="Бишкек. Чорморова 23/3 кв.43" class="form__input form__input-app" name="addressRegistr">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="form__inputs" id="incomeData">
+              <h2 class="form__title form__inputs-title">Данные о ваших доходах</h2>
+              <div class="row">
+
+
+                <div class="col-12 col-sm-4">
+                  <div class="form__input-item">
+                    <label for="organization" class="form__label">Организация</label>
+                    <input type="text" id="organization" placeholder="Megacom" class="form__input form__input-app" name="company">
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-8">
+                  <div class="form__input-item">
+                    <label for="position" class="form__label">Должность</label>
+                    <input type="text" id="position" placeholder="Ведущий бухгалтер" class="form__input form__input-app" name="position">
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                  <div class="form__input-item">
+                    <label for="salary" class="form__label">Заработная плата в  месяц</label>
+                    <input type="number" id="salary"  class="form__input form__input-app"  name="salary">
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6">
+                  <div class="form__input-item">
+                    <label for="salary__three" class="form__label">Заработная Плата  за посл.  3 месяца</label>
+                    <input type="number" id="salary__three"  class="form__input form__input-app" name="salaryFor3Month">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="form__inputs" id="creditInfo">
+              <h2 class="form__title form__inputs-title">Сведения о кредите</h2>
+              <div class="row">
+
+                <div class="col-12">
+                  <div class="form__input-item">
+                    <label for="product" class="form__label">Покупка телефона ( наименование товара)</label>
+                    <input type="text" id="product" placeholder="iPhone XS 256" class="form__input form__input-app" name="good">
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="product__price" class="form__label">Стоимость товара</label>
+                    <input type="number" id="product__price" placeholder="65 000 сом" class="form__input form__input-app" name="price">
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="quantity" class="form__label">Количество товара</label>
+                    <input type="text" id="quantity" placeholder="1 шт" class="form__input form__input-app" name="amount">
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="credit__summ" class="form__label">Итого сумма кредита</label>
+                    <input type="number" id="credit__summ" placeholder="65 000 сом" class="form__input form__input-app" name="creditAmount">
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="credit__type" class="form__label">Вид кредита </label>
+                    <select class="form__input form__input-app" id="credit__type" name="creditType">
+                      <option selected>Кредит/Рассрочка</option>
+                      <option value="Рассрочка">Рассрочка</option>
+                      <option value="Кредит">Кредит</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="credit__time" class="form__label">Срок кредита (мес)</label>
+                    <select class="form__input form__input-app" id="credit__time" name="creditTerm">
+                      <option selected>мин 3 месяца</option>
+                      <option value="3 месяца">3 месяца</option>
+                      <option value="6 месяцев">6 месяцев</option>
+                      <option value="9 месяцев">9 месяцев</option>
+                      <option value="12 месяцев">12 месяцев</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4">
+                  <div class="form__input-item">
+                    <label for="credit__point" class="form__label">Точка получения товара</label>
+                    <select class="form__input form__input-app" id="credit__point" name="pickUpPoint">
+                      <option selected>Выберите адрес</option>
+                      <option value="пр.Айтматова 3, ТЦ 'Asia Mall', этаж 0">
+                        <strong>ТЦ "Азия Молл"</strong>
+                        <p>пр.Айтматова 3, ТЦ "Asia Mall", этаж 0</p>
+                      </option>
+                      <option value="пр.Чуй 92, ТРК ГУМ 'Чынар', этаж-1, бутик M9 (северная сторона)">
+                        <strong>ТЦ ГУМ "Чынар"</strong>
+                        <p>пр.Чуй 92, ТРК ГУМ "Чынар", этаж-1, бутик M9 (северная сторона)</p>
+                      </option>
+                      <option value="ул. Юнусалиева 177/2, торговый центр 'Beta Stores - 2'">
+                        <strong>ТЦ "Beta Stores - 2"</strong>
+                        <p>ул. Юнусалиева 177/2, торговый центр "Beta Stores - 2"</p>
+                      </option>
+                      <option value="ул. Горького 27/1, 'Vefa Center', 1 этаж. Бутик №20">
+                        <strong>ТЦ "Vefa Center"</strong>
+                        <p>ул. Горького 27/1, "Vefa Center", 1 этаж. Бутик №20</p>
+                      </option>
+                      <option value="ул. Бейшеналиева 42А, ТЦ 'Беш-Сары Сити'">
+                        <strong>ТЦ "Беш-Сары Сити"</strong>
+                        <p>ул. Бейшеналиева 42А, ТЦ "Беш-Сары Сити"</p>
+                      </option>
+                      <option value="пр. Жибек Жолу 150, ТРЦ 'Аламедин Гранд', 1 этаж, Бутик №1 (вход с ул. Алма-Атинская)">
+                        <strong>ТРЦ "Аламедин Гранд"</strong>
+                        <p>пр. Жибек Жолу 150, ТРЦ "Аламедин Гранд", 1 этаж, Бутик №1 (вход с ул. Алма-Атинская)</p>
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+
+              </div>
+
+              <button id="save-btn" class="form__btn form__input-btn-arrange">Оформить заявку</button>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
