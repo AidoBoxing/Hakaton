@@ -1,0 +1,28 @@
+.buffet-block {
+    width: 250px;
+    border: 1px solid black;
+}
+#root{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+#root div{
+    margin: 5px;
+    padding: 20px;
+}
+.delete-btn{
+    background: url(https://e7.pngegg.com/pngimages/977/950/png-clipart-computer-icons-delete-text-rectangle.png);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    width: 20px;
+    height: 25px;
+}
+.edit-btn{
+    background: url(https://img2.freepng.ru/20180608/ke/kisspng-computer-icons-video-editing-5b1ae3e2018078.1873970515284889300062.jpg);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    width: 20px;
+    height: 20px;
+}
